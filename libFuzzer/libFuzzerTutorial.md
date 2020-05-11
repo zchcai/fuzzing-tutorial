@@ -328,7 +328,8 @@ Now, run the newly built fuzzer for 10-20 seconds with and without a dictionary:
 ./libxml2-v2.9.2-fsanitize_fuzzer -dict=afl/dictionaries/xml.dict  # Press Ctrl-C in 10-20 seconds
 ```
 
-Did you see the difference? 
+Did you see the difference?
+> For around 10 seconds running, the first only covered 1423 but the second covered 2135.
 
 Now create a corpus directory and run for real on all CPUs:
 ```shell
@@ -337,8 +338,13 @@ mkdir CORPUS
 ```
 
 How much time did it take to find the bug?
+> Around 2 min 20 seconds.
+
 What is the bug?
-How much time will it take to find the bug w/o a dictionary?  
+> heap-buffer-overflow
+
+How much time will it take to find the bug w/o a dictionary?
+> Around 8 min 6 seconds.
 
 Take a look at the file `afl/dictionaries/xml.dict`
 (distributed with [AFL](http://lcamtuf.coredump.cx/afl/)).
