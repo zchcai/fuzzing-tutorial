@@ -364,7 +364,8 @@ mkdir -p ~/openssl-1.0.2d; rm -rf ~/openssl-1.0.2d/*; cd ~/openssl-1.0.2d
 mkdir CORPUS; ./openssl-1.0.2d-fsanitize_fuzzer  -max_len=256 CORPUS -jobs=8 -workers=8
 ```
 
-Did it crash? How? 
+Did it crash? How?
+> Deadly signal, because of the assertion failure in results comparison.
 
 ## Competing bugs
 
