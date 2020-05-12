@@ -442,8 +442,8 @@ mkdir CORPUS # Create an empty corpus dir.
 ```
 ```
 echo -n A > CORPUS/A && ./a.out CORPUS/* && \
-             llvm-profdata merge -sparse *.profraw -o default.profdata && \
-             llvm-cov show a.out -instr-profile=default.profdata -name=FuzzMe
+             llvm-profdata-9 merge -sparse *.profraw -o default.profdata && \
+             llvm-cov-9 show a.out -instr-profile=default.profdata -name=FuzzMe
 ```
 ![cov1](libFuzzer/cov1.png)
 ```
