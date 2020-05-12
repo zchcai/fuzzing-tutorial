@@ -389,6 +389,8 @@ After a minute or two look for the errors in the log files:
 grep ERROR *.log | sort -k 3
 ```
 You will see one paticular bug very often (which one?) but occasionally others will occur too. 
+> Very often: "out of memory"; occasionally: "heap-buffer-overflow",
+> "heap-use-after-free", "global-buffer-overflow", "stack-buffer-overflow".
 
 
 ## Minimizing a corpus
